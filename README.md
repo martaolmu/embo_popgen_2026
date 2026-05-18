@@ -33,3 +33,21 @@ To connect to the machine via SSH, please send us your public key.
 
 You can find the list of posters in the dedicated folder:
 * [Browse Posters](Posters)
+---
+### Organized by:
+
+<p align="left">
+  <img src="popgenlogo.jpg" width="150" />
+</p>
+
+<p align="left">
+  <img src="SIBE.pdf" width="100" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="SIGA.jpg" width="100" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="AGI.png" width="100" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="elixir.jpg" width="100" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="Recas.png" width="100" />
+</p>
