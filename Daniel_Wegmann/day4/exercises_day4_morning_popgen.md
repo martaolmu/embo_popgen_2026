@@ -111,6 +111,9 @@ pbinom(9, size = 100, prob = 0.1)
 
     ## [1] 0.4512902
 
+
+### dins de la distribucio, estem calculant l'area que queda per sota de 10
+## ja que es la prob de tenir p<10 
 </details>
 
 <br/>
@@ -131,6 +134,11 @@ from 201 to 1000, or as 1 minus the integral from 0 to 200:
 ```
 
     ## [1] 0.4168445
+
+### fem 1- perque matematicament amb aquest tipus de distribucio per quedar-nos
+## el que tenim per sobre de cert valor el que fem es restar 1 (que es el total)
+## menys la part baixa de la distribucio. Aixi ens quedem la part alta de la
+## distribucio fins el punt que volem 
 
 Note that the probabilities for an increase and decrease are not equal,
 i.e. this distribution is not symmetric.
@@ -155,7 +163,9 @@ for(twoN in c(10, 100, 1000, 10000)){
   plot(p, d, type = 'b')
 }
 ```
-
+## p es la mida poblacional, d la probabilitat de tenir l'allel
+## com mes mida poblacional, la probabilitat de tenir l'allel queda mes
+## restringida a certa mida de la poblacio/queda la finestra mes petita(?)
 ![](exercises_popgen_files/figure-markdown_github/unnamed-chunk-6-1.png)
 </details>
 
@@ -207,6 +217,31 @@ trajectories <- replicate(1000, simulateWF(twoN = 100, f = 0.1, G = 1000))
 plot(0, type='n', ylim=c(0,1), xlim=c(0, nrow(trajectories)))
 invisible(apply(trajectories, 2, lines, type='l'))
 ```
+## [1] "Allele was lost in 895 / 1000 cases."
+
+### repeticions canviant mida poblacional
+trajectories <- replicate(1000, simulateWF(twoN = 1000, f = 0.1, G = 1000))
+plot(0, type='n', ylim=c(0,1), xlim=c(0, nrow(trajectories)))
+invisible(apply(trajectories, 2, lines, type='l'))
+## [1] "Allele was lost in 783 / 1000 cases."
+
+## canvi de freq inicial
+trajectories <- replicate(1000, simulateWF(twoN = 100, f = 0.5, G = 1000))
+plot(0, type='n', ylim=c(0,1), xlim=c(0, nrow(trajectories)))
+invisible(apply(trajectories, 2, lines, type='l'))
+## [1] "Allele was lost in 491 / 1000 cases."
+
+trajectories <- replicate(1000, simulateWF(twoN = 100, f = 0.9, G = 1000))
+plot(0, type='n', ylim=c(0,1), xlim=c(0, nrow(trajectories)))
+invisible(apply(trajectories, 2, lines, type='l'))
+### [1] "Allele was lost in 94 / 1000 cases."
+
+### amb mida poblacional petita l'allel es perd o es fixa abans
+## amb freq 0.5 tan pot ser que es fixi com que es perdi (amb pob gran aixo triga mes
+## a passar)
+## amb freq 0.9 sembla mes probable que es fixi (amb pob gran aixo triga mes a passar)
+## al final la prob de que es fixi la mutacio es la seva freq (pq aqui no tenim seleccio
+## actuant)
 
 ![](exercises_popgen_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
@@ -246,6 +281,7 @@ trajectories <- replicate(1000, simulateWF(twoN = 100, f = 1/twoN, G = 1000))
 plot(0, type='n', ylim=c(0,1), xlim=c(0, nrow(trajectories)))
 invisible(apply(trajectories, 2, lines, type='l'))
 ```
+## [1] "Allele was fixed in 0 / 1000 cases."
 
 ![](exercises_popgen_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
