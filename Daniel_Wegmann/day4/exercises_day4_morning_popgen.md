@@ -111,9 +111,12 @@ pbinom(9, size = 100, prob = 0.1)
 
     ## [1] 0.4512902
 
+<<<<<<< HEAD
 
 ### dins de la distribucio, estem calculant l'area que queda per sota de 10
 ## ja que es la prob de tenir p<10 
+=======
+>>>>>>> ad78745bcf521f6484474218d69e7a2d3813cd6a
 </details>
 
 <br/>
@@ -135,11 +138,14 @@ from 11 to 100, or as 1 minus the integral from 0 to 10:
 
     ## [1] 0.4168445
 
+<<<<<<< HEAD
 ### fem 1- perque matematicament amb aquest tipus de distribucio per quedar-nos
 ## el que tenim per sobre de cert valor el que fem es restar 1 (que es el total)
 ## menys la part baixa de la distribucio. Aixi ens quedem la part alta de la
 ## distribucio fins el punt que volem 
 
+=======
+>>>>>>> ad78745bcf521f6484474218d69e7a2d3813cd6a
 Note that the probabilities for an increase and decrease are not equal,
 i.e. this distribution is not symmetric.
 </details>
@@ -164,6 +170,7 @@ for(twoN in c(10, 100, 1000, 10000)){
 }
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## p es la mida poblacional, d la probabilitat de tenir l'allel
 ## com mes mida poblacional, la probabilitat de tenir l'allel queda mes
 ## restringida a certa mida de la poblacio/queda la finestra mes petita(?)
@@ -172,6 +179,10 @@ for(twoN in c(10, 100, 1000, 10000)){
 
 ![](exercises_day4_morning_popgen_files/figure-markdown_github/unnamed-chunk-6-1.png)
 >>>>>>> 3fbab559757950ad1e8d72120eb283077c7cdb6d
+=======
+
+![](exercises_day4_morning_popgen_files/figure-markdown_github/unnamed-chunk-6-1.png)
+>>>>>>> ad78745bcf521f6484474218d69e7a2d3813cd6a
 </details>
 
 <br/>
@@ -222,6 +233,7 @@ trajectories <- replicate(1000, simulateWF(twoN = 100, f = 0.1, G = 1000))
 plot(0, type='n', ylim=c(0,1), xlim=c(0, nrow(trajectories)))
 invisible(apply(trajectories, 2, lines, type='l'))
 ```
+<<<<<<< HEAD
 ## [1] "Allele was lost in 895 / 1000 cases."
 
 ### repeticions canviant mida poblacional
@@ -247,6 +259,8 @@ invisible(apply(trajectories, 2, lines, type='l'))
 ## amb freq 0.9 sembla mes probable que es fixi (amb pob gran aixo triga mes a passar)
 ## al final la prob de que es fixi la mutacio es la seva freq (pq aqui no tenim seleccio
 ## actuant)
+=======
+>>>>>>> ad78745bcf521f6484474218d69e7a2d3813cd6a
 
 ![](exercises_day4_morning_popgen_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
@@ -286,7 +300,10 @@ trajectories <- replicate(1000, simulateWF(twoN = 100, f = 1/twoN, G = 1000))
 plot(0, type='n', ylim=c(0,1), xlim=c(0, nrow(trajectories)))
 invisible(apply(trajectories, 2, lines, type='l'))
 ```
+<<<<<<< HEAD
 ## [1] "Allele was fixed in 0 / 1000 cases."
+=======
+>>>>>>> ad78745bcf521f6484474218d69e7a2d3813cd6a
 
 ![](exercises_day4_morning_popgen_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
